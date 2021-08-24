@@ -45,16 +45,14 @@ app.get('/', (req, res) => {
     })
 })
 
-function executeCurlScript(){
-    exec('sh curl_script.sh',
+let curlScript = exec('sh curl_script.sh',
         (error, stdout, stderr) => {
             console.log(stdout);
             console.log(stderr);
             if (error !== null) {
                 console.log(`exec error: ${error}`);
             }
-    });
-}
+});
 
 
 app.listen(3000, () => console.log('App run on port 3000!'))
