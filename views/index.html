@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo</title>
+</head>
+<body>
+    
+    <form action="/" method="get">
+        <input type="submit" value="Refrescar">
+    </form>
+
+    <div class="btn-container">
+        <% if(instance1) {%>
+            <label>Instancia 1 funcionando</label>
+        <%}else{%>
+            <form action="/restart1" method="get">
+                <label>Instancia 1 detenida</label>
+                <input type="button" value="instancia1" style="background-color: red;">
+            </form>
+        <%}%>
+
+        <% if(instance2) {%>
+            <label>Instancia 2 funcionando</label>
+        <%}else{%>
+            <form action="/restart2" method="get">
+                <label>Instancia 2 detenida</label>
+                <input type="button" value="instancia2" style="background-color: red;">
+            </form>
+        <%}%>
+    </div>
+</body>
+</html>
