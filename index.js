@@ -17,21 +17,21 @@ setInterval(() => {
     console.log(info.length)
     for (let i = 0; i < info.length; i++) {
         console.log(info[0])
-        if(info[i] === 'instancia2'){
-            if(info[i + 1] === 'hola xddd'){
-                console.log('instancia 2 fuunciona')
-                this.instance2 = true
-            }else{
-                console.log('instancia 2 no funciona')
-                this.instance2 = false
-            }
-        } else if(info[i] === 'instancia1'){
-            if(info[i + 1] === 'hola asdasdsa'){
+        if(info[i] === 'instancia1'){
+            if(info[i + 1] === 'hola mundo'){
                 console.log('instancia 1 fuunciona')
                 this.instance1 = true
             }else{
                 console.log('instancia 1 no funciona')
                 this.instance1 = false
+            }
+        } else if(info[i] === 'instancia2'){
+            if(info[i + 1] === 'hola mundo'){
+                console.log('instancia 2 fuunciona')
+                this.instance2 = true
+            }else{
+                console.log('instancia 2 no funciona')
+                this.instance2 = false
             }
         }
     }
